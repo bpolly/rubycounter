@@ -29,3 +29,12 @@ jobs:
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
+      -
+        name: Read VERSION file
+        id: package
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: ./VERSION
+      -
+        name: Echo VERSION file
+        run: echo ${{ steps.package.outputs.content }}
