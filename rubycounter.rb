@@ -2,7 +2,7 @@ require 'sinatra'
 require 'redis'
 
 get '/frank-says' do
-  'Smoking is bad! Ah yes v v v bad'
+  'Smoking is bad! Ah yes v v v v bad'
 end
 
 get '/test-page' do
