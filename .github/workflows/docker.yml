@@ -25,7 +25,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: bpolly/rubycounter:1.2
+          tags: bpolly/rubycounter:1.3
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
