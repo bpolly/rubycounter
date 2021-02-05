@@ -29,3 +29,6 @@ jobs:
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
+      -
+        name: Display branch name
+        run: echo ${{ github.head_ref }}
