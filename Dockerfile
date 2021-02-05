@@ -1,6 +1,6 @@
 FROM ruby
 
-RUN gem install sinatra redis puma
+RUN gem install sinatra redis puma --no-document
 
 EXPOSE 80
 

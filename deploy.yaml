@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: rubycounter-deployment
+  labels:
+    keel.sh/policy: force
 spec:
   selector:
     matchLabels:
@@ -14,7 +16,8 @@ spec:
     spec:
       containers:
       - name: rubycounter
-        image: bpolly/rubycounter:1.1
+        image: bpolly/rubycounter:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
 ---
