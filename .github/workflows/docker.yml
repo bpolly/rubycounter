@@ -30,6 +30,9 @@ jobs:
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
       -
+        name: Checkout source code
+        uses: actions/checkout@v2
+      -
         name: Read VERSION file
         id: getversion
         run: echo "::set-output name=version::$(cat VERSION)"
