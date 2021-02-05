@@ -31,10 +31,8 @@ jobs:
         run: echo ${{ steps.docker_build.outputs.digest }}
       -
         name: Read VERSION file
-        id: package
-        uses: juliangruber/read-file-action@v1
-        with:
-          path: ../VERSION
+        id: getversion
+        run: echo "::set-output name=version::$(cat VERSION)"
       -
         name: Echo VERSION file
-        run: echo ${{ steps.package.outputs.content }}
+        run: echo ${{ steps.getversion.outputs.version }}
