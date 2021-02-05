@@ -6,7 +6,7 @@ get '/frank-says' do
 end
 
 get '/test-page' do
-  'Welcome to the test page'
+  'Welcome to the new test page'
 end
 
 get '/initialize' do

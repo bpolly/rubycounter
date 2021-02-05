@@ -15,4 +15,7 @@ helm upgrade --install webhookrelay-operator webhookrelay/webhookrelay-operator 
 helm list
 # create webhookrelay_cr.yaml
 kubectl apply -f webhookrelay_cr.yaml
+helm delete keel --namespace=kube-system
+helm install keel keel/keel --set helmProvider.version="v3"
+kubectl --namespace=default get pods -l "app=keel"
 ```
