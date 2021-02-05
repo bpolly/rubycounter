@@ -34,7 +34,7 @@ jobs:
         id: package
         uses: juliangruber/read-file-action@v1
         with:
-          path: ./VERSION
+          path: ../VERSION
       -
         name: Echo VERSION file
         run: echo ${{ steps.package.outputs.content }}
