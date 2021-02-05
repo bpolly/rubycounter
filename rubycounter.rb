@@ -5,6 +5,10 @@ get '/frank-says' do
   'Smoking is bad! Ah yes v bad'
 end
 
+get '/test-page' do
+  'Welcome to the test page'
+end
+
 get '/initialize' do
   redis = Redis.new(host: 'redis-service')
   current_count = redis.get('mykey').to_i
