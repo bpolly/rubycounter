@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: rubycounter
-        image: bpolly/rubycounter:br1
+        image: bpolly/rubycounter:1.4
         imagePullPolicy: Always
         ports:
         - containerPort: 80
